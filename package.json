@@ -4,19 +4,19 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "start": "node dist/index.js"
+    "prepublish": "npm run build"
   },
   "bin": {
     "obedjs": "./dist/index.js"
   },
   "keywords": ["CLI", "Command Line Interface", "ObedJS"],
-  "author": "Your Name or Organization",
-  "license": "ISC",
+  "author": "ObedJS",
+  "license": "MIT",
   "description": "A command-line interface for ObedJS framework",
   "devDependencies": {
-    "@types/commander": "^2.12.2",
+    "@types/commander": "^12.1.0",
     "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
