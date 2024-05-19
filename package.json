@@ -4,9 +4,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts",
-    "prepublish": "npm run build",
-    "generate": "ts-node ./src/commands/scripts/generate.ts"
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js"
   },
   "bin": {
     "obedjs": "./dist/index.js"
@@ -18,7 +17,6 @@
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "@types/node": "^20.12.12",
-    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
