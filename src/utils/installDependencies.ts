@@ -7,5 +7,5 @@ export const installDependencies = (projectName: string) => {
   execSync('npm install', { cwd: projectPath, stdio: 'inherit' });
   console.log('Dependencies installed.');
   console.log(`cd ${projectName}`);
-  console.log(`npm start:dev`);
+  console.log(`npm run start:dev`);
 };

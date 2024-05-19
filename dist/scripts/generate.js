@@ -33,6 +33,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.generateFile = void 0;
 const path = __importStar(require("path"));
 const fileHelpers_1 = require("./utils/fileHelpers");
 const templates_1 = require("./utils/templates");
@@ -54,7 +55,7 @@ const dirMap = {
     config: `config`,
     test: `controllers/${lowerCaseName}/__tests__`,
     e2e: `tests/e2e`,
-    dto: `dtos/${lowerCaseName}`,
+    dto: `dto/${lowerCaseName}`,
 };
 const fileExists = (filePath) => {
     return fs.existsSync(filePath);
@@ -76,6 +77,7 @@ const generateFile = (type, name) => __awaiter(void 0, void 0, void 0, function*
     (0, fileHelpers_1.writeFile)(filePath, content);
     console.log(`${colors_1.colors.green}Generated ${type} at ${filePath}${colors_1.colors.reset}`);
 });
+exports.generateFile = generateFile;
 const generateTestFile = (type, name) => {
     const template = templates_1.templates.test;
     const dirPath = path.join('src', type === 'controller' ? `controllers/${lowerCaseName}/__tests__` : `services/${lowerCaseName}/__tests__`);
@@ -96,9 +98,9 @@ const generateE2ETestFile = (name) => {
 };
 // Check if the type is "all" and generate all resources accordingly
 if (type === "all") {
-    generateFile("controller", name);
-    generateFile("service", name);
-    generateFile("route", name);
+    (0, exports.generateFile)("controller", name);
+    (0, exports.generateFile)("service", name);
+    (0, exports.generateFile)("route", name);
     // Generate test files for all resource types
     generateTestFile("controller", name);
     generateTestFile("service", name);
@@ -107,7 +109,7 @@ if (type === "all") {
     generateE2ETestFile(name);
 }
 else {
-    generateFile(type, name);
+    (0, exports.generateFile)(type, name);
 }
 //generateFile(type, name);
 // Generate test files only if the type is not "e2e", "model", "middleware", or "config"

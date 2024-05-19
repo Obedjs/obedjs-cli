@@ -40,10 +40,10 @@ const installDependencies_1 = require("../utils/installDependencies");
 const createCommand = (projectName) => __awaiter(void 0, void 0, void 0, function* () {
     const repoUrl = 'https://github.com/Obedjs/obedjs.git';
     const targetPath = path.join(process.cwd(), projectName);
-    console.log(`${colors_1.colors.green}Creating project ${projectName}...${colors_1.colors.reset}`);
+    console.log(`${colors_1.colors.green}Creating ${projectName}...${colors_1.colors.reset}`);
     try {
         yield (0, downloadRepo_1.downloadRepo)(repoUrl, targetPath);
-        console.log(`${colors_1.colors.green}Project ${projectName} created successfully.${colors_1.colors.reset}`);
+        console.log(`${colors_1.colors.green}${projectName} created successfully.${colors_1.colors.reset}`);
         console.log(`${colors_1.colors.green}Installing dependencies...${colors_1.colors.reset}`);
         yield (0, installDependencies_1.installDependencies)(projectName);
         // execSync('npm install', { cwd: targetPath, stdio: 'inherit' });

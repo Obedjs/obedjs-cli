@@ -16,5 +16,6 @@ program
   .action((projectName: string) => {
     createCommand(projectName);
   });
+  
 
 program.parse(process.argv);

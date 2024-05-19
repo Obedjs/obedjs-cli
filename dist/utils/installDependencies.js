@@ -31,5 +31,7 @@ const installDependencies = (projectName) => {
     console.log('Installing dependencies...');
     (0, child_process_1.execSync)('npm install', { cwd: projectPath, stdio: 'inherit' });
     console.log('Dependencies installed.');
+    console.log(`cd ${projectName}`);
+    console.log(`npm start:dev`);
 };
 exports.installDependencies = installDependencies;
