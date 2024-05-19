@@ -1,0 +1,33 @@
+
+### Contributing Guide
+
+Create a `CONTRIBUTING.md` file:
+
+```markdown
+# Contributing to ObedJS CLI
+
+Thank you for considering contributing to ObedJS CLI! Here are a few guidelines to help you get started.
+
+## Reporting Issues
+
+If you find a bug or have a feature request, please create an issue on GitHub.
+
+## Submitting Pull Requests
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/your-feature`).
+6. Create a new Pull Request.
+
+## Code Style
+
+Please follow the existing code style and structure. Ensure your code passes the linting and tests.
+
+## Running Tests
+
+Run the tests with:
+
+```bash
+npm test
