@@ -12,6 +12,14 @@
   "keywords": ["CLI", "Command Line Interface", "ObedJS"],
   "author": "ObedJS",
   "license": "MIT",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/Obedjs/obedjs-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Obedjs/obedjs-cli/issues"
+  },
+  "homepage": "https://github.com/Obedjs/obedjs-cli/#readme",
   "description": "A command-line interface for ObedJS framework",
   "devDependencies": {
     "@types/commander": "^12.1.0",
